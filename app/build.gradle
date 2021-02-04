@@ -1,0 +1,72 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    signingConfigs {
+        release {
+            storeFile file('admobdemo.jks')
+            storePassword productionStorePass
+            keyAlias productionAlias
+            keyPassword productionKeyPass
+        }
+    }
+
+    compileSdkVersion 30
+    buildToolsVersion '30.0.3'
+    defaultConfig {
+        applicationId "com.demo.bannerexample"
+        minSdkVersion 17
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            signingConfig signingConfigs.release
+        }
+    }
+
+    flavorDimensions "version"
+    productFlavors {
+        demo {
+            dimension "version"
+            applicationIdSuffix ".demo"
+            versionNameSuffix "-demo"
+
+            resValue "string", "app_name", "Banner demo. Test data"
+            resValue "string", "admob_app_id", AdmobAppId
+            resValue "string", "admob_banner_id", "ca-app-pub-3940256099942544/6300978111"
+        }
+        full {
+            dimension "version"
+            applicationIdSuffix ".full"
+            versionNameSuffix "-full"
+
+            resValue "string", "app_name", "Banner demo. Release data"
+            resValue "string", "admob_app_id", AdmobAppId
+            resValue "string", "admob_banner_id", AdmobBannerId
+        }
+        my{
+            dimension "version"
+            applicationIdSuffix ".myself"
+            versionNameSuffix "-myself"
+
+            resValue "string", "app_name", "Banner demo. Myself data"
+            resValue "string", "admob_app_id", AdmobAppIdMyself
+            resValue "string", "admob_banner_id", AdmobBannerIdMyself
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.gms:play-services-ads:19.7.0'
+}

@@ -1,0 +1,28 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+ext {
+    AdmobAppIdMyself = "ca-app-pub-9939518381636264~1092563271"
+    AdmobBannerIdMyself = "ca-app-pub-5685815977317698/7995207182"
+    AdmobAppId = "ca-app-pub-5736616173578609~8401744750"
+    AdmobBannerId = "ca-app-pub-5736616173578609/5164195563"
+
+}
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.2'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
