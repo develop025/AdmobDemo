@@ -2,5 +2,8 @@
 /.idea/
 /gradle/wrapper/gradle-wrapper.jar
 /app/build/
+/app/my/
+/app/full/
+/app/demo/
 /build/
 /gradle.properties
