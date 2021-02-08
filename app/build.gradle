@@ -36,16 +36,16 @@ android {
             applicationIdSuffix ".demo"
             versionNameSuffix "-demo"
 
-            resValue "string", "app_name", "Banner demo. Test data"
+            resValue "string", "app_name", "Banner. Test data"
             resValue "string", "admob_app_id", AdmobAppId
             resValue "string", "admob_banner_id", "ca-app-pub-3940256099942544/6300978111"
         }
         full {
             dimension "version"
-            applicationIdSuffix ".full"
-            versionNameSuffix "-full"
+            applicationIdSuffix ".ver"
+            versionNameSuffix "-ver"
 
-            resValue "string", "app_name", "Banner demo. Release data"
+            resValue "string", "app_name", "Banner. Release data VER"
             resValue "string", "admob_app_id", AdmobAppId
             resValue "string", "admob_banner_id", AdmobBannerId
         }
@@ -54,7 +54,7 @@ android {
             applicationIdSuffix ".myself"
             versionNameSuffix "-myself"
 
-            resValue "string", "app_name", "Banner demo. Myself data"
+            resValue "string", "app_name", "Banner. Myself data"
             resValue "string", "admob_app_id", AdmobAppIdMyself
             resValue "string", "admob_banner_id", AdmobBannerIdMyself
         }

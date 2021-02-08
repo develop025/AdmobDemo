@@ -35,9 +35,9 @@ public class MyActivity extends AppCompatActivity {
 
         tvLog = findViewById(R.id.tvLog);
 
-        MobileAds.setRequestConfiguration(
-                new RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("2DBD06389D800646BB9BEA59A2392226", "25679938971D2B95253438941CD71269"))
-                        .build());
+//        MobileAds.setRequestConfiguration(
+//                new RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("2DBD06389D800646BB9BEA59A2392226", "25679938971D2B95253438941CD71269"))
+//                        .build());
 
         MobileAds.initialize(
                 this,
